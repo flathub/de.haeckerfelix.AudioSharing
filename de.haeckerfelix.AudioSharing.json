@@ -1,7 +1,7 @@
 {
     "app-id": "de.haeckerfelix.AudioSharing",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "audio-sharing",
@@ -69,7 +69,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "tag" : "1.0.0-alpha.2"
+                    "tag" : "1.0.0.alpha.3"
                 }
             ]
         },
@@ -79,8 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/efdf4c5da4e8174c98cbcb20271ad11d/audio-sharing-0.1.1.tar.xz",
-                    "sha256" : "3df76f676c8e6b71161c2cc4cc1ac53e456e003fb05bbdd6684cc6118b304531"
+                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/f0b2ddfc5f0d7d523859c16a6217a273/audio-sharing-0.1.2.tar.xz",
+                    "sha256" : "dfc20433bef14d0d5b07411c6102c8a705bf678da4f54b4957d3154eed4df7a2"
                 }
             ]
         }
