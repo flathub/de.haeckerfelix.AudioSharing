@@ -10,7 +10,6 @@
         "--socket=wayland",
         "--device=dri",
         "--share=network",
-        "--talk-name=org.a11y.Bus",
         "--socket=pulseaudio"
     ],
     "build-options" : {
