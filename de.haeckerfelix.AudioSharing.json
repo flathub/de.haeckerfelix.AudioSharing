@@ -17,6 +17,86 @@
     },
     "modules": [
         {
+            "name":"libsass",
+            "sources":[
+                {
+                    "type":"archive",
+                    "url":"https://github.com/sass/libsass/archive/3.6.4.tar.gz",
+                    "sha256":"f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
+                },
+                {
+                    "type":"script",
+                    "dest-filename":"autogen.sh",
+                    "commands":[
+                        "autoreconf -si"
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"sassc",
+            "sources":[
+                {
+                    "type":"archive",
+                    "url":"https://github.com/sass/sassc/archive/3.6.1.tar.gz",
+                    "sha256":"8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+                },
+                {
+                    "type":"script",
+                    "dest-filename":"autogen.sh",
+                    "commands":[
+                        "autoreconf -si"
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"pango",
+            "buildsystem":"meson",
+            "config-opts":[
+                "-Dintrospection=disabled"
+            ],
+            "sources":[
+                {
+                    "type":"archive",
+                    "url":"https://gitlab.gnome.org/GNOME/pango/-/archive/1.50.3/pango-1.50.3.tar.gz",
+                    "sha256":"4a8b0cf33d5f9ecaa9cd99dd72703d5c4c53bc58df64dd9538493bb4356ab691"
+                }
+            ]
+        },
+        {
+            "name":"gtk",
+            "buildsystem":"meson",
+            "config-opts":[
+                "-Dbuild-examples=false",
+                "-Dbuild-tests=false",
+                "-Dintrospection=disabled"
+            ],
+            "sources":[
+                {
+                    "type":"archive",
+                    "url":"https://download.gnome.org/sources/gtk/4.6/gtk-4.6.0.tar.xz",
+                    "sha256":"782d5951fbfd585fc9ec76c09d07e28e6014c72db001fb567fff217fb96e4d8c"
+                }
+            ]
+        },
+        {
+            "name":"libadwaita",
+            "buildsystem":"meson",
+            "config-opts":[
+                "-Dvapi=false",
+                "-Dexamples=false",
+                "-Dtests=false"
+            ],
+            "sources":[
+                {
+                    "type":"archive",
+                    "url":"https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.0.1/libadwaita-1.0.1.tar.gz",
+                    "sha256":"2a178c074ce9a78d39a5889a007b201ef130690b6afab6b773c9baaebdf7d980"
+                }
+            ]
+        },
+        {
             "name": "gst-rtsp-server",
             "buildsystem": "meson",
             "config-opts": [
@@ -31,55 +111,13 @@
             ]
         },
         {
-            "name" : "libsass",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/libsass.git",
-                    "commit" : "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-                }
-            ]
-        },
-        {
-            "name" : "sassc",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/sassc.git",
-                    "commit" : "82803377c33247265d779af034eceb5949e78354"
-                }
-            ]
-        },
-        {
-            "name" : "libadwaita",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false"
-            ],
-            "cleanup" : [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "tag" : "1.0.0.alpha.3"
-                }
-            ]
-        },
-        {
             "name": "audio-sharing",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/f0b2ddfc5f0d7d523859c16a6217a273/audio-sharing-0.1.2.tar.xz",
-                    "sha256" : "dfc20433bef14d0d5b07411c6102c8a705bf678da4f54b4957d3154eed4df7a2"
+                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/7a5277dc6d7cd1cf6131eb3f313a1743/audio-sharing-0.2.0.tar.xz",
+                    "sha256" : "96f704f58da04037e0b7c26644a1c45c4ad3168dd2a439d78376a634776816c1"
                 }
             ]
         }
