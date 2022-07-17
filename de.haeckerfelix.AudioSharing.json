@@ -1,7 +1,7 @@
 {
     "app-id": "de.haeckerfelix.AudioSharing",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "audio-sharing",
@@ -16,86 +16,6 @@
         "append-path" : "/usr/lib/sdk/rust-stable/bin"
     },
     "modules": [
-        {
-            "name":"libsass",
-            "sources":[
-                {
-                    "type":"archive",
-                    "url":"https://github.com/sass/libsass/archive/3.6.4.tar.gz",
-                    "sha256":"f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
-                },
-                {
-                    "type":"script",
-                    "dest-filename":"autogen.sh",
-                    "commands":[
-                        "autoreconf -si"
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"sassc",
-            "sources":[
-                {
-                    "type":"archive",
-                    "url":"https://github.com/sass/sassc/archive/3.6.1.tar.gz",
-                    "sha256":"8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
-                },
-                {
-                    "type":"script",
-                    "dest-filename":"autogen.sh",
-                    "commands":[
-                        "autoreconf -si"
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"pango",
-            "buildsystem":"meson",
-            "config-opts":[
-                "-Dintrospection=disabled"
-            ],
-            "sources":[
-                {
-                    "type":"archive",
-                    "url":"https://gitlab.gnome.org/GNOME/pango/-/archive/1.50.3/pango-1.50.3.tar.gz",
-                    "sha256":"4a8b0cf33d5f9ecaa9cd99dd72703d5c4c53bc58df64dd9538493bb4356ab691"
-                }
-            ]
-        },
-        {
-            "name":"gtk",
-            "buildsystem":"meson",
-            "config-opts":[
-                "-Dbuild-examples=false",
-                "-Dbuild-tests=false",
-                "-Dintrospection=disabled"
-            ],
-            "sources":[
-                {
-                    "type":"archive",
-                    "url":"https://download.gnome.org/sources/gtk/4.6/gtk-4.6.0.tar.xz",
-                    "sha256":"782d5951fbfd585fc9ec76c09d07e28e6014c72db001fb567fff217fb96e4d8c"
-                }
-            ]
-        },
-        {
-            "name":"libadwaita",
-            "buildsystem":"meson",
-            "config-opts":[
-                "-Dvapi=false",
-                "-Dexamples=false",
-                "-Dtests=false"
-            ],
-            "sources":[
-                {
-                    "type":"archive",
-                    "url":"https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.0.1/libadwaita-1.0.1.tar.gz",
-                    "sha256":"2a178c074ce9a78d39a5889a007b201ef130690b6afab6b773c9baaebdf7d980"
-                }
-            ]
-        },
         {
             "name": "gst-rtsp-server",
             "buildsystem": "meson",
