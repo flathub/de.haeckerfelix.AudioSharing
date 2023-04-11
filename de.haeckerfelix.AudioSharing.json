@@ -10,6 +10,7 @@
         "--socket=wayland",
         "--device=dri",
         "--share=network",
+        "--share=ipc",
         "--socket=pulseaudio"
     ],
     "build-options" : {
