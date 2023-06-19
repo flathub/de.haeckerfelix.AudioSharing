@@ -34,8 +34,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/cf926be36003a32c731dd7991b189800/audio-sharing-0.2.1.tar.xz",
-                    "sha256" : "b282924e6759ddf02262a0bd10847bb04a78098cdc02493041d572abdccce4eb"
+                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/1a29775f4790171cec9f4f3b9dda4db7/audio-sharing-0.2.2.tar.xz",
+                    "sha256" : "1698ae106fd1f0810aeaf7ff23519ad4f6cfc1f531f082bde9b8a4f0375c2f8f"
                 }
             ]
         }
