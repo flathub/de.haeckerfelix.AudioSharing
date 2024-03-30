@@ -1,7 +1,7 @@
 {
     "app-id": "de.haeckerfelix.AudioSharing",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "audio-sharing",
@@ -24,7 +24,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gstreamer/gst-rtsp-server.git",
-                    "tag": "1.16.2"
+                    "tag": "1.19.2"
                 }
             ]
         },
