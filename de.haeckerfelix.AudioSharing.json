@@ -1,7 +1,7 @@
 {
     "app-id": "de.haeckerfelix.AudioSharing",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "audio-sharing",
@@ -20,11 +20,13 @@
         {
             "name": "gst-rtsp-server",
             "buildsystem": "meson",
+            "subdir": "subprojects/gst-rtsp-server",
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-rtsp-server.git",
-                    "tag": "1.16.2"
+                    "disable-submodules": true,
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
+                    "tag": "1.22.11"
                 }
             ]
         },
@@ -34,8 +36,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/1a29775f4790171cec9f4f3b9dda4db7/audio-sharing-0.2.2.tar.xz",
-                    "sha256" : "1698ae106fd1f0810aeaf7ff23519ad4f6cfc1f531f082bde9b8a4f0375c2f8f"
+                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/a630c9acd8e3cd910fe6c36129129514/audio-sharing-0.2.4.tar.xz",
+                    "sha256" : "bd3036066b47f5bdb39621c52dda8ef1d33d7c600b8b9a0b503a202f523d65c7"
                 }
             ]
         }
