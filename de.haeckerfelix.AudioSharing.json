@@ -20,11 +20,13 @@
         {
             "name": "gst-rtsp-server",
             "buildsystem": "meson",
+            "subdir": "subprojects/gst-rtsp-server",
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-rtsp-server.git",
-                    "tag": "1.19.2"
+                    "disable-submodules": true,
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
+                    "tag": "1.22.11"
                 }
             ]
         },
@@ -34,8 +36,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/1a29775f4790171cec9f4f3b9dda4db7/audio-sharing-0.2.2.tar.xz",
-                    "sha256" : "1698ae106fd1f0810aeaf7ff23519ad4f6cfc1f531f082bde9b8a4f0375c2f8f"
+                    "url": "https://gitlab.gnome.org/World/AudioSharing/uploads/b0920bf828a3cc5e2869445bc5a7f445/audio-sharing-0.2.3.tar.xz",
+                    "sha256" : "7074221498e66024f3837b2b8df095e4d926661424234628ececc499d882dac3"
                 }
             ]
         }
