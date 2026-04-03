@@ -16,6 +16,12 @@
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin"
     },
+    "cleanup": [
+        "/include",
+        "/lib/girepository-1.0",
+        "/lib/pkgconfig",
+        "/share/gir-1.0"
+    ],
     "modules": [
         {
             "name": "gst-rtsp-server",
